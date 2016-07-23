@@ -17,70 +17,72 @@
     </ul>
   </nav>
 
-  <div class="filters">
+  <div class="container">
 
-    <div class="slider">
-      <label for="time-slider">Song length:</label><br />
-      <input type="range" id="time-slider" min="10" max="100" step="1">
-    </div>
+    <div class="filters item_1">
 
-    <div class="artist_dropdown">
-      <label for="artist">Artist:</label><br />
-      <select name="artist">
-        <option value="" disabled selected>Options</option>
-        <option value="mcferrin">Taylor McFerrin</option>
-        <option value="meshuggah">Meshuggah</option>
-        <option value="mobb_deep">Mobb Deep</option>
-        <option value="allan">Allan Holdsworth</option>
-        <option value="action">Action Bronson</option>
-      </select>
-    </div><br />
+      <div class="slider">
+        <label for="time-slider">Song length:</label><br />
+        <input type="range" id="time-slider" min="10" max="100" step="1">
+      </div>
 
-    <div class="album_dropdown">
-      <label for="album">Album:</label><br />
-      <select name="album">
-        <option value="" disabled selected>Options</option>
-        <option value="riser">Early Riser</option>
-        <option value="nothing">Nothing</option>
-        <option value="infamous">The Infamous</option>
-        <option value="fatigue">Metal Fatigue</option>
-        <option value="wonderful">Mr. Wonderful</option>
-      </select>
-    </div><br />
+      <div class="artist_dropdown">
+        <label for="artist">Artist:</label><br />
+        <select name="artist">
+          <option value="" disabled selected>Options</option>
+          <option value="mcferrin">Taylor McFerrin</option>
+          <option value="meshuggah">Meshuggah</option>
+          <option value="mobb_deep">Mobb Deep</option>
+          <option value="allan">Allan Holdsworth</option>
+          <option value="action">Action Bronson</option>
+        </select>
+      </div><br />
 
-    <div class="genres">
-      <legend>Genre:</legend><br />
-      <input type="checkbox" name="genre" value="rock" />Rock
-      <input type="checkbox" name="genre" value="classical" />Classical <br />
-      <input type="checkbox" name="genre" value="pop" />Pop
-      <input type="checkbox" name="genre" value="jazz" />Jazz<br />
-      <input type="checkbox" name="genre" value="blues" />Blues
-      <input type="checkbox" name="genre" value="hip_hop" />Hip hop<br /><br />
-    </div>
+      <div class="album_dropdown">
+        <label for="album">Album:</label><br />
+        <select name="album">
+          <option value="" disabled selected>Options</option>
+          <option value="riser">Early Riser</option>
+          <option value="nothing">Nothing</option>
+          <option value="infamous">The Infamous</option>
+          <option value="fatigue">Metal Fatigue</option>
+          <option value="wonderful">Mr. Wonderful</option>
+        </select>
+      </div><br />
 
-    <div class="filter_button">
-      <button type="submit">Filter</button>
-    </div>
-  </div> <!-- end of .filters -->
+      <div class="genres">
+        <legend>Genre:</legend><br />
+        <li><input type="checkbox" name="genre" value="rock" />Rock</li>
+        <li><input type="checkbox" name="genre" value="classical" />Classical</li>
+        <li><input type="checkbox" name="genre" value="pop" />Pop</li>
+        <li><input type="checkbox" name="genre" value="jazz" />Jazz</li>
+        <li><input type="checkbox" name="genre" value="blues" />Blues</li>
+        <li><input type="checkbox" name="genre" value="hip_hop" />Hip hop</li>
+      </div>
 
-  <div class="song_list">
-    <h2>Song Name</h2>
-      <p>Artist name</p>
-      <p>Album name</p>
-      <p>Genre</p>
-    <h2>Song Name</h2>
-      <p>Artist name</p>
-      <p>Album name</p>
-      <p>Genre</p>
-    <h2>Song Name</h2>
-      <p>Artist name</p>
-      <p>Album name</p>
-      <p>Genre</p>
-    <h2>Song Name</h2>
-      <p>Artist name</p>
-      <p>Album name</p>
-      <p>Genre</p>
-  </div> <!-- end of .song_list -->
+      <div class="filter_button">
+        <button type="submit">Filter</button>
+      </div>
+    </div> <!-- end of .filters -->
 
+    <div class="song_list item_2">
+      <h2>Song Name</h2>
+        <p>Artist name</p>
+        <p>Album name</p>
+        <p>Genre</p>
+      <h2>Song Name</h2>
+        <p>Artist name</p>
+        <p>Album name</p>
+        <p>Genre</p>
+      <h2>Song Name</h2>
+        <p>Artist name</p>
+        <p>Album name</p>
+        <p>Genre</p>
+      <h2>Song Name</h2>
+        <p>Artist name</p>
+        <p>Album name</p>
+        <p>Genre</p>
+    </div> <!-- end of .song_list -->
+  </div>
 </body>
 </html>

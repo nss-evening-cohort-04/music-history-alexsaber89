@@ -1,15 +1,35 @@
+/*********************
+  FLEXBOX
+*********************/
+
+.container {
+  display: flex;
+}
+
+.item_1 {
+  flex-grow: 1;
+}
+
+.item_2 {
+  flex-grow: 2;
+}
+
+/*********************
+  GENERAL
+*********************/
+
 body {
   font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
 
 /*********************
-  NAVBAR STYLING
+  NAVBAR
 *********************/
 
 nav {
   background-color: #FFB4B0;
   border: 2px solid black;
-  margin: 2% 4%;
+  margin: 2% 6% 1%;
 }
 
 nav ul {
@@ -21,18 +41,24 @@ nav li {
 }
 
 /*********************
-  FILTERS STYLING
+  FILTERS
 *********************/
 
 .filters {
   background-color: #4DD7FA;
   border: 2px solid black;
   padding: 1%;
-  margin: 0 4%;
+  margin-left: 6%;
+  margin-right: 25px;
   display: inline-block;
 }
 
+.genres {
+  list-style-type: none;
+}
+
 .filter_button {
+  margin-top: 15px;
   text-align: center;
 }
 
@@ -41,14 +67,14 @@ nav li {
 }
 
 /*********************
-  SONG LIST STYLING
+  SONG LIST
 *********************/
 
 .song_list {
   background-color: #FEFAC0;
   border: 2px solid black;
-  padding: 2%;
-  margin: 0 4%;
+  padding: 1%;
+  margin-right: 6%;
 }
 
 .song_list h2 {
