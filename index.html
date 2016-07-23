@@ -4,6 +4,7 @@
 <head>
   <meta charset="utf-8">
   <title>Music History</title>
+  <link rel="stylesheet" type="text/css" href="styles.css">
 </head>
 
 <body>
@@ -24,29 +25,36 @@
     </div>
 
     <div class="artist_dropdown">
-      <select>
-        <option value="volvo">Volvo</option>
-        <option value="saab">Saab</option>
-        <option value="mercedes">Mercedes</option>
-        <option value="audi">Audi</option>
+      <label for="artist">Artist:</label><br />
+      <select name="artist">
+        <option value="" disabled selected>Options</option>
+        <option value="mcferrin">Taylor McFerrin</option>
+        <option value="meshuggah">Meshuggah</option>
+        <option value="mobb_deep">Mobb Deep</option>
+        <option value="allan">Allan Holdsworth</option>
+        <option value="action">Action Bronson</option>
       </select>
-    </div>
+    </div><br />
 
     <div class="album_dropdown">
-      <select>
-        <option value="volvo">Volvo</option>
-        <option value="saab">Saab</option>
-        <option value="mercedes">Mercedes</option>
-        <option value="audi">Audi</option>
+      <label for="album">Album:</label><br />
+      <select name="album">
+        <option value="" disabled selected>Options</option>
+        <option value="riser">Early Riser</option>
+        <option value="nothing">Nothing</option>
+        <option value="infamous">The Infamous</option>
+        <option value="fatigue">Metal Fatigue</option>
+        <option value="wonderful">Mr. Wonderful</option>
       </select>
-    </div>
+    </div><br />
 
     <div class="genres">
-      <input type="checkbox" name="genre" value="rock" />Rock <br />
-      <input type="checkbox" name="genre" value="pop" />Pop<br />
-      <input type="checkbox" name="genre" value="blues" />Blues<br />
+      <legend>Genre:</legend><br />
+      <input type="checkbox" name="genre" value="rock" />Rock
       <input type="checkbox" name="genre" value="classical" />Classical <br />
+      <input type="checkbox" name="genre" value="pop" />Pop
       <input type="checkbox" name="genre" value="jazz" />Jazz<br />
+      <input type="checkbox" name="genre" value="blues" />Blues
       <input type="checkbox" name="genre" value="hip_hop" />Hip hop<br /><br />
     </div>
 
@@ -56,19 +64,19 @@
   </div> <!-- end of .filters -->
 
   <div class="song_list">
-    <h3>Song Name</h3>
+    <h2>Song Name</h2>
       <p>Artist name</p>
       <p>Album name</p>
       <p>Genre</p>
-    <h3>Song Name</h3>
+    <h2>Song Name</h2>
       <p>Artist name</p>
       <p>Album name</p>
       <p>Genre</p>
-    <h3>Song Name</h3>
+    <h2>Song Name</h2>
       <p>Artist name</p>
       <p>Album name</p>
       <p>Genre</p>
-    <h3>Song Name</h3>
+    <h2>Song Name</h2>
       <p>Artist name</p>
       <p>Album name</p>
       <p>Genre</p>

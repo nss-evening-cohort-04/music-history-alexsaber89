@@ -1,0 +1,60 @@
+body {
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+
+/*********************
+  NAVBAR STYLING
+*********************/
+
+nav {
+  background-color: #FFB4B0;
+  border: 2px solid black;
+  margin: 2% 4%;
+}
+
+nav ul {
+  list-style-type: none;
+}
+
+nav li {
+  display: inline-block;
+}
+
+/*********************
+  FILTERS STYLING
+*********************/
+
+.filters {
+  background-color: #4DD7FA;
+  border: 2px solid black;
+  padding: 1%;
+  margin: 0 4%;
+  display: inline-block;
+}
+
+.filter_button {
+  text-align: center;
+}
+
+.filter_button button {
+  padding: 0 25px;
+}
+
+/*********************
+  SONG LIST STYLING
+*********************/
+
+.song_list {
+  background-color: #FEFAC0;
+  border: 2px solid black;
+  padding: 2%;
+  margin: 0 4%;
+}
+
+.song_list h2 {
+  color: #785616;
+}
+
+.song_list p {
+  display: inline-block;
+}
