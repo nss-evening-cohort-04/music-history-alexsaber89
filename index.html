@@ -8,6 +8,71 @@
 
 <body>
 
+  <nav>
+    <ul>
+      <li><a href="#">View Music</a></li>
+      <li><a href="#">Add Music</a></li>
+      <li><a href="#">Profile</a></li>
+    </ul>
+  </nav>
+
+  <div class="filters">
+
+    <div class="slider">
+      <label for="time-slider">Song length:</label><br />
+      <input type="range" id="time-slider" min="10" max="100" step="1">
+    </div>
+
+    <div class="artist_dropdown">
+      <select>
+        <option value="volvo">Volvo</option>
+        <option value="saab">Saab</option>
+        <option value="mercedes">Mercedes</option>
+        <option value="audi">Audi</option>
+      </select>
+    </div>
+
+    <div class="album_dropdown">
+      <select>
+        <option value="volvo">Volvo</option>
+        <option value="saab">Saab</option>
+        <option value="mercedes">Mercedes</option>
+        <option value="audi">Audi</option>
+      </select>
+    </div>
+
+    <div class="genres">
+      <input type="checkbox" name="genre" value="rock" />Rock <br />
+      <input type="checkbox" name="genre" value="pop" />Pop<br />
+      <input type="checkbox" name="genre" value="blues" />Blues<br />
+      <input type="checkbox" name="genre" value="classical" />Classical <br />
+      <input type="checkbox" name="genre" value="jazz" />Jazz<br />
+      <input type="checkbox" name="genre" value="hip_hop" />Hip hop<br /><br />
+    </div>
+
+    <div class="filter_button">
+      <button type="submit">Filter</button>
+    </div>
+  </div> <!-- end of .filters -->
+
+  <div class="song_list">
+    <h3>Song Name</h3>
+      <p>Artist name</p>
+      <p>Album name</p>
+      <p>Genre</p>
+    <h3>Song Name</h3>
+      <p>Artist name</p>
+      <p>Album name</p>
+      <p>Genre</p>
+    <h3>Song Name</h3>
+      <p>Artist name</p>
+      <p>Album name</p>
+      <p>Genre</p>
+    <h3>Song Name</h3>
+      <p>Artist name</p>
+      <p>Album name</p>
+      <p>Genre</p>
+  </div> <!-- end of .song_list -->
 
 </body>
 </html>
