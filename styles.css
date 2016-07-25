@@ -11,7 +11,7 @@
 }
 
 .item_2 {
-  flex-grow: 2;
+  flex-grow: 4;
 }
 
 /*********************
@@ -29,7 +29,7 @@ body {
 nav {
   background-color: #FFB4B0;
   border: 2px solid black;
-  margin: 2% 6% 1%;
+  margin: 2% 10% 1%;
 }
 
 nav ul {
@@ -48,13 +48,25 @@ nav li {
   background-color: #4DD7FA;
   border: 2px solid black;
   padding: 1%;
-  margin-left: 6%;
+  margin-left: 10%;
   margin-right: 25px;
-  display: inline-block;
+}
+
+.checkbox_left {
+  float: left;
+}
+
+.checkbox_right {
+  float: right;
+}
+
+.slider input {
+	width: 100%;
 }
 
 .genres {
   list-style-type: none;
+  display: flex;
 }
 
 .filter_button {
@@ -74,7 +86,7 @@ nav li {
   background-color: #FEFAC0;
   border: 2px solid black;
   padding: 1%;
-  margin-right: 6%;
+  margin-right: 10%;
 }
 
 .song_list h2 {
