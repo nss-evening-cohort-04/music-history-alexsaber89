@@ -1,0 +1,98 @@
+/*********************
+  FLEXBOX
+*********************/
+
+.container {
+  display: flex;
+}
+
+.item_1 {
+  flex-grow: 1;
+}
+
+.item_2 {
+  flex-grow: 4;
+}
+
+/*********************
+  GENERAL
+*********************/
+
+body {
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+
+/*********************
+  NAVBAR
+*********************/
+
+nav {
+  background-color: #FFB4B0;
+  border: 2px solid black;
+  margin: 2% 10% 1%;
+}
+
+nav ul {
+  list-style-type: none;
+}
+
+nav li {
+  display: inline-block;
+}
+
+/*********************
+  FILTERS
+*********************/
+
+.filters {
+  background-color: #4DD7FA;
+  border: 2px solid black;
+  padding: 1%;
+  margin-left: 10%;
+  margin-right: 25px;
+}
+
+.checkbox_left {
+  float: left;
+}
+
+.checkbox_right {
+  float: right;
+}
+
+.slider input {
+	width: 100%;
+}
+
+.genres {
+  list-style-type: none;
+  display: flex;
+}
+
+.filter_button {
+  margin-top: 15px;
+  text-align: center;
+}
+
+.filter_button button {
+  padding: 0 25px;
+}
+
+/*********************
+  SONG LIST
+*********************/
+
+.song_list {
+  background-color: #FEFAC0;
+  border: 2px solid black;
+  padding: 1%;
+  margin-right: 10%;
+}
+
+.song_list h2 {
+  color: #785616;
+}
+
+.song_list p {
+  display: inline-block;
+}
