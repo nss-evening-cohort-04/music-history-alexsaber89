@@ -11,7 +11,7 @@
 }
 
 .item_2 {
-  flex-grow: 4;
+  flex-grow: 50;
 }
 
 /*********************
@@ -49,24 +49,20 @@ nav li {
   border: 2px solid black;
   padding: 1%;
   margin-left: 10%;
-  margin-right: 25px;
-}
-
-.checkbox_left {
-  float: left;
-}
-
-.checkbox_right {
-  float: right;
+  margin-right: 15px;
 }
 
 .slider input {
-	width: 100%;
+  width: 100%;
 }
 
 .genres {
   list-style-type: none;
   display: flex;
+}
+
+.checkbox_right {
+  padding-left: 3%;
 }
 
 .filter_button {
