@@ -7,11 +7,13 @@
 }
 
 .item_1 {
-  flex-grow: 1;
+  /*flex-grow: 1;*/
+  width: 20%;
 }
 
 .item_2 {
-  flex-grow: 50;
+  /*flex-grow: 1;*/
+  width: 70%;
 }
 
 /*********************
@@ -61,8 +63,8 @@ nav li {
   display: flex;
 }
 
-.checkbox_right {
-  padding-left: 3%;
+.inline_checkbox {
+  display: inline-block;
 }
 
 .filter_button {
@@ -90,5 +92,6 @@ nav li {
 }
 
 .song_list p {
-  display: inline-block;
+  display: block;
+  margin
 }
