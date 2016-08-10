@@ -6,16 +6,6 @@
   display: flex;
 }
 
-.item_1 {
-  /*flex-grow: 1;*/
-  width: 20%;
-}
-
-.item_2 {
-  /*flex-grow: 1;*/
-  width: 70%;
-}
-
 /*********************
   GENERAL
 *********************/
@@ -47,6 +37,7 @@ nav li {
 *********************/
 
 .filters {
+  width: 20%;
   background-color: #4DD7FA;
   border: 2px solid black;
   padding: 1%;
@@ -81,6 +72,7 @@ nav li {
 *********************/
 
 .song_list {
+  width: 70%;
   background-color: #FEFAC0;
   border: 2px solid black;
   padding: 1%;
