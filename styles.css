@@ -33,6 +33,31 @@ nav li {
 }
 
 /*********************
+  ADD MUSIC
+*********************/
+
+#add-music-view {
+  display: flex;
+  margin-top: 70px;
+}
+
+.user-music-info {
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+}
+
+.user-music-info label {
+  text-align: right;
+  line-height: 1.8em;
+}
+
+.user-music-info button {
+  width: 50%;
+  margin: 10px auto 0;
+}
+
+/*********************
   FILTERS
 *********************/
 

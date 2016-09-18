@@ -21,3 +21,13 @@ for (var i = 0; i < songs.length; i++) {
   songListDiv.innerHTML += "<p>" + songs[i] + "</p>";
 }
 
+document.getElementById("list-view-btn").addEventListener("click", function() {
+  document.getElementById("list-music-view").style.visibility = "visible";
+  document.getElementById("add-music-view").style.visibility = "hidden";
+});
+
+
+document.getElementById("add-view-btn").addEventListener("click", function() {
+  document.getElementById("add-music-view").style.visibility = "visible";
+  document.getElementById("list-music-view").style.visibility = "hidden";
+});
