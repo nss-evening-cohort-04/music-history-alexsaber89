@@ -1,101 +1,89 @@
 <!doctype html>
-
 <html lang="en">
-<head>
-  <meta charset="utf-8">
-  <title>Music History</title>
-  <link rel="stylesheet" type="text/css" href="styles.css">
-</head>
-
-<body>
-
-  <nav>
-    <ul>
-      <li><a id="list-view-btn" href="#">List Music</a></li>
-      <li>|</li>
-      <li><a id="add-view-btn" href="#">Add Music</a></li>
-    </ul>
-  </nav>
-
-  <div id="add-music-view">
-    <div class="user-music-info">
-      <label>Song Name: <input type="text" /></label>
-      <label>Artist: <input type="text" /></label>
-      <label>Album: <input type="text" /></label>
-      <button id="add-btn">Add</button>
+  <head>
+    <meta charset="utf-8">
+    <title>Music History</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+  </head>
+  <body>
+    <nav>
+      <ul>
+        <li><a id="list-view-btn" href="#">List Music</a></li>
+        <li>|</li>
+        <li><a id="add-view-btn" href="#">Add Music</a></li>
+      </ul>
+    </nav>
+    <div id="add-music-view">
+      <div class="user-music-info">
+        <label>Song Name: <input type="text" /></label>
+        <label>Artist: <input type="text" /></label>
+        <label>Album: <input type="text" /></label>
+        <button id="add-btn">Add</button>
+      </div>
     </div>
-  </div>
-
-  <div id="list-music-view">
-    <div class="container">
-
-      <div class="filters">
-
-        <div class="slider">
-          <label for="time-slider">Song length:</label><br />
-          <input type="range" id="time-slider" min="10" max="100" step="1">
-        </div>
-
-        <div class="artist_dropdown">
-          <label for="artist">Artist:</label><br />
-          <select name="artist">
-            <option value="" disabled selected>Options</option>
-            <option value="mcferrin">Taylor McFerrin</option>
-            <option value="meshuggah">Meshuggah</option>
-            <option value="mobb_deep">Mobb Deep</option>
-            <option value="allan">Allan Holdsworth</option>
-            <option value="action">Action Bronson</option>
-          </select>
-        </div><br />
-
-        <div class="album_dropdown">
-          <label for="album">Album:</label><br />
-          <select name="album">
-            <option value="" disabled selected>Options</option>
-            <option value="riser">Early Riser</option>
-            <option value="nothing">Nothing</option>
-            <option value="infamous">The Infamous</option>
-            <option value="fatigue">Metal Fatigue</option>
-            <option value="wonderful">Mr. Wonderful</option>
-          </select>
-        </div><br />
-
-        <legend class="legend">Genre:</legend><br />
-        <div class="genres">
-          <div class="checkboxes">
-            <div class="inline_checkbox">
-              <label><input type="checkbox" name="genre" value="rock" />Rock</label>
+    <div id="list-music-view">
+      <div class="container">
+        <div class="filters">
+          <div class="slider">
+            <label for="time-slider">Song length:</label><br />
+            <input type="range" id="time-slider" min="10" max="100" step="1">
+          </div>
+          <div class="artist_dropdown">
+            <label for="artist">Artist:</label><br />
+            <select name="artist">
+              <option value="" disabled selected>Options</option>
+              <option value="mcferrin">Taylor McFerrin</option>
+              <option value="meshuggah">Meshuggah</option>
+              <option value="mobb_deep">Mobb Deep</option>
+              <option value="allan">Allan Holdsworth</option>
+              <option value="action">Action Bronson</option>
+            </select>
+          </div><br />
+          <div class="album_dropdown">
+            <label for="album">Album:</label><br />
+            <select name="album">
+              <option value="" disabled selected>Options</option>
+              <option value="riser">Early Riser</option>
+              <option value="nothing">Nothing</option>
+              <option value="infamous">The Infamous</option>
+              <option value="fatigue">Metal Fatigue</option>
+              <option value="wonderful">Mr. Wonderful</option>
+            </select>
+          </div><br />
+          <legend class="legend">Genre:</legend><br />
+          <div class="genres">
+            <div class="checkboxes">
+              <div class="inline_checkbox">
+                <label><input type="checkbox" name="genre" value="rock" />Rock</label>
+              </div>
+              <div class="inline_checkbox">
+                <label><input type="checkbox" name="genre" value="pop" />Pop</label>
+              </div>
+              <div class="inline_checkbox">
+                <label><input type="checkbox" name="genre" value="blues" />Blues</label>
+              </div>
             </div>
-            <div class="inline_checkbox">
-              <label><input type="checkbox" name="genre" value="pop" />Pop</label>
-            </div>
-            <div class="inline_checkbox">
-              <label><input type="checkbox" name="genre" value="blues" />Blues</label>
-            </div>
-        </div>
-        <div class="checkboxes">
-            <div class="inline_checkbox">
-              <label><input type="checkbox" name="genre" value="classical" />Classical</label>
-            </div>
-            <div class="inline_checkbox">
-              <label><input type="checkbox" name="genre" value="jazz" />Jazz</label>
-            </div>
-            <div class="inline_checkbox">
-              <label><input type="checkbox" name="genre" value="hip_hop" />Hip hop</label>
+            <div class="checkboxes">
+              <div class="inline_checkbox">
+                <label><input type="checkbox" name="genre" value="classical" />Classical</label>
+              </div>
+              <div class="inline_checkbox">
+                <label><input type="checkbox" name="genre" value="jazz" />Jazz</label>
+              </div>
+              <div class="inline_checkbox">
+                <label><input type="checkbox" name="genre" value="hip_hop" />Hip hop</label>
+              </div>
             </div>
           </div>
+          <div class="filter_button">
+            <button type="submit">Filter</button>
+          </div>
         </div>
-
-        <div class="filter_button">
-          <button type="submit">Filter</button>
+        <div class="song_list" id="song_list_id">
         </div>
-      </div>
-
-      <div class="song_list" id="song_list_id">
       </div>
     </div>
-  </div>
-<script type="text/javascript" src="songs.js">
-</script>
-</body>
+    <script type="text/javascript" src="songs.js">
+    </script>
+  </body>
 </html>
