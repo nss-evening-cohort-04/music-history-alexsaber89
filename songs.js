@@ -12,9 +12,13 @@ function collectUserInput() {
   var userInputSongName = document.getElementById("song-name");
   var userInputArtist = document.getElementById("artist");
   var userInputAlbum = document.getElementById("album");
-  var newSongString = userInputSongName.value + " - by " + userInputArtist.value + " on the album " + userInputAlbum.value;
-  songs.push(newSongString);
-  songListDiv.innerHTML += "<p>" + newSongString + "</p>";
+  var userInputObject = {
+    "song_name": userInputSongName.value,
+    "artist_name": userInputArtist.value,
+    "album_name": userInputAlbum.value
+  }
+  musicObjects.push(userInputObject);
+  populateSongDiv(musicObjects);
   userInputSongName.value = "";
   userInputArtist.value = "";
   userInputAlbum.value = "";
@@ -23,11 +27,12 @@ function collectUserInput() {
 
 function parseJSON() {
   var data = JSON.parse(this.responseText);
-  songObjects = data.songList;
-  populateSongDiv(songObjects);
+  musicObjects = data.songList;
+  populateSongDiv(musicObjects);
 }
 
 function populateSongDiv(array) {
+  songListDiv.innerHTML = "";
   for (var i = 0; i < array.length; i++) {
     songListDiv.innerHTML += "<p>" + array[i].song_name + " by " + array[i].artist_name + " on the album " + array[i].album_name + "</p>";
   }
@@ -39,7 +44,7 @@ document.getElementById("list-view-btn").addEventListener("click", activateListV
 document.getElementById("add-view-btn").addEventListener("click", activateAddView);
 document.getElementById("add-btn").addEventListener("click", collectUserInput);
 
-var songObjects = [];
+var musicObjects = [];
 var songListDiv = document.getElementById("song_list_id");
 
 
