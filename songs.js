@@ -36,7 +36,6 @@ function populateSongDiv(array) {
       "</div>";
   }
   songListDiv.innerHTML = musicContentDivs;
-  songListDiv.scrollTop = songListDiv.scrollHeight;
 }
 
 function collectUserInput() {
@@ -57,6 +56,7 @@ function collectUserInput() {
   userInputArtist.value = "";
   userInputAlbum.value = "";
   activateListView();
+  songListDiv.scrollTop = songListDiv.scrollHeight;
 }
 
 function deleteObjectFromDOMAndArray(eventTarget) {
