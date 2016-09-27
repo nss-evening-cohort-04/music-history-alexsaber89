@@ -37,6 +37,7 @@ function populateSongDiv(array) {
   }
   musicContentDivs += "<button id='more-btn'>More ></button>";
   songListDiv.innerHTML = musicContentDivs;
+  songListDiv.scrollTop = songListDiv.scrollHeight;
 }
 
 function collectUserInput() {
@@ -84,7 +85,6 @@ function JSON2() {
     counter++;
   }
   populateSongDiv(musicObjectsArray);
-  document.getElementById("more-btn").style.display = "none";
   console.log("JSON2 loaded: ",musicObjectsArray);
 }
 
