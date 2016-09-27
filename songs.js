@@ -35,6 +35,7 @@ function populateSongDiv(array) {
         "</p>" +
       "</div>";
   }
+  musicContentDivs += "<button id='more-btn'>More ></button>";
   songListDiv.innerHTML = musicContentDivs;
 }
 
@@ -75,6 +76,18 @@ function deleteObjectFromDOMAndArray(eventTarget) {
   }
 }
 
+function JSON2() {
+  var data = JSON.parse(this.responseText);
+  var JSON2musicObjectsArray = data.songList;
+  for (var i = 0; i < JSON2musicObjectsArray.length; i++) {
+    musicObjectsArray.push(JSON2musicObjectsArray[i]);
+    counter++;
+  }
+  populateSongDiv(musicObjectsArray);
+  document.getElementById("more-btn").style.display = "none";
+  console.log("JSON2 loaded: ",musicObjectsArray);
+}
+
 //On page load, activate the list view
 activateListView();
 document.getElementById("list-view-btn").addEventListener("click", activateListView);
@@ -83,6 +96,11 @@ document.getElementById("add-btn").addEventListener("click", collectUserInput);
 document.querySelector("body").addEventListener("click", function() {
   if (event.target.classList[0] === "delete") {
     deleteObjectFromDOMAndArray(event.target);
+  } else if (event.target.id === "more-btn") {
+    var myRequest2 = new XMLHttpRequest();
+    myRequest2.addEventListener("load", JSON2);
+    myRequest2.open("GET", "songList2.json");
+    myRequest2.send();
   }
 });
 
@@ -93,7 +111,7 @@ var counter = 0;
 
 var myRequest = new XMLHttpRequest();
 myRequest.addEventListener("load", parseJSON);
-myRequest.open("GET", "songList.json");
+myRequest.open("GET", "songList1.json");
 myRequest.send();
 
 //RegEx stuff (not sure if needed?)
