@@ -81,6 +81,7 @@ function JSON2() {
   var data = JSON.parse(this.responseText);
   var JSON2musicObjectsArray = data.songList;
   for (var i = 0; i < JSON2musicObjectsArray.length; i++) {
+    JSON2musicObjectsArray[i].id = counter;
     musicObjectsArray.push(JSON2musicObjectsArray[i]);
     counter++;
   }
