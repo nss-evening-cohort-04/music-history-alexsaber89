@@ -93,22 +93,24 @@ nav li {
 }
 
 /*********************
-  SONG LIST
+  SONG LIST 
 *********************/
 
-.song_list {
+#song_list_id {
   width: 70%;
+  height: 360px;
   background-color: #FEFAC0;
   border: 2px solid black;
   padding: 1%;
   margin-right: 10%;
+  overflow-y: auto;
 }
 
-.song_list h2 {
-  color: #785616;
+#song_list_id div {
+  display: flex;
 }
 
-.song_list p {
-  display: block;
-  margin
+.delete {
+  padding: 0;
+  margin: 5px 5px;
 }

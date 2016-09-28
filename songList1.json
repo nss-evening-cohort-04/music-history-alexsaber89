@@ -1,0 +1,24 @@
+{
+  "songList": [
+    {
+      "song_name": "Legs",
+      "artist_name": "ZZ Top",
+      "album_name": "Eliminator"
+    },
+    {
+      "song_name": "The Logical Song",
+      "artist_name": "Supertramp",
+      "album_name": "Breakfast in America"
+    },
+    {
+      "song_name": "Another Brick in the Wall",
+      "artist_name": "Pink Floyd",
+      "album_name": "The Wall"
+    },
+    {
+      "song_name": "Welcome to the Jungle",
+      "artist_name": "Guns & Roses",
+      "album_name": "Appetite for Destruction"
+    }
+  ]
+}
