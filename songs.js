@@ -1,11 +1,11 @@
 function activateListView() {
-  document.getElementById("list-music-view").style.display = "block";
-  document.getElementById("add-music-view").style.display = "none";
+  $('#list-music-view').show();
+  $('#add-music-view').hide();
 }
 
 function activateAddView() {
-  document.getElementById("add-music-view").style.display = "flex";
-  document.getElementById("list-music-view").style.display = "none";
+  $('#add-music-view').show();
+  $('#list-music-view').hide();
 }
 
 function parseJSON() {
@@ -20,7 +20,7 @@ function parseJSON() {
 }
 
 function populateSongDiv(array) {
-  songListDiv.innerHTML = "";
+  songListDiv.html("");
   var musicContentDivs = "";
   for (var i = 0; i < array.length; i++) {
     musicContentDivs +=
@@ -36,27 +36,27 @@ function populateSongDiv(array) {
       "</div>";
   }
   musicContentDivs += "<button id='more-btn'>More ></button>";
-  songListDiv.innerHTML = musicContentDivs;
+  songListDiv.html(musicContentDivs);
   songListDiv.scrollTop = songListDiv.scrollHeight;
 }
 
 function collectUserInput() {
-  var userInputSongName = document.getElementById("song-name");
-  var userInputArtist = document.getElementById("artist");
-  var userInputAlbum = document.getElementById("album");
+  var userInputSongName = $('#song-name');
+  var userInputArtist = $('#artist');
+  var userInputAlbum = $('#album');
   var userInputObject = {
-    "song_name": userInputSongName.value,
-    "artist_name": userInputArtist.value,
-    "album_name": userInputAlbum.value,
+    "song_name": userInputSongName.val(),
+    "artist_name": userInputArtist.val(),
+    "album_name": userInputAlbum.val(),
     "id": counter
   }
   counter++;
   musicObjectsArray.push(userInputObject);
   populateSongDiv(musicObjectsArray);
   console.log("User input added to array/DOM: ",musicObjectsArray);
-  userInputSongName.value = "";
-  userInputArtist.value = "";
-  userInputAlbum.value = "";
+  userInputSongName.val("");
+  userInputArtist.val("");
+  userInputAlbum.val("");
   activateListView();
   songListDiv.scrollTop = songListDiv.scrollHeight;
 }
@@ -77,36 +77,51 @@ function deleteObjectFromDOMAndArray(eventTarget) {
   }
 }
 
-function JSON2() {
-  var data = JSON.parse(this.responseText);
-  var JSON2musicObjectsArray = data.songList;
-  for (var i = 0; i < JSON2musicObjectsArray.length; i++) {
-    JSON2musicObjectsArray[i].id = counter;
-    musicObjectsArray.push(JSON2musicObjectsArray[i]);
-    counter++;
-  }
-  populateSongDiv(musicObjectsArray);
-  console.log("JSON2 loaded: ",musicObjectsArray);
-}
+// function JSON2() {
+//   var data = JSON.parse(this.responseText);
+//   var JSON2musicObjectsArray = data.songList;
+//   for (var i = 0; i < JSON2musicObjectsArray.length; i++) {
+//     JSON2musicObjectsArray[i].id = counter;
+//     musicObjectsArray.push(JSON2musicObjectsArray[i]);
+//     counter++;
+//   }
+//   populateSongDiv(musicObjectsArray);
+//   console.log("JSON2 loaded: ",musicObjectsArray);
+// }
 
 //On page load, activate the list view
 activateListView();
-document.getElementById("list-view-btn").addEventListener("click", activateListView);
-document.getElementById("add-view-btn").addEventListener("click", activateAddView);
-document.getElementById("add-btn").addEventListener("click", collectUserInput);
+$("#list-view-btn").click(activateListView);
+$("#add-view-btn").click(activateAddView);
+$("#add-btn").click(collectUserInput);
 document.querySelector("body").addEventListener("click", function() {
   if (event.target.classList[0] === "delete") {
     deleteObjectFromDOMAndArray(event.target);
   } else if (event.target.id === "more-btn") {
-    var myRequest2 = new XMLHttpRequest();
-    myRequest2.addEventListener("load", JSON2);
-    myRequest2.open("GET", "songList2.json");
-    myRequest2.send();
+    $.ajax({
+      type: "GET",
+      url: "songList2.json",
+      cache: false,
+      success: function(data){
+        var JSON2musicObjectsArray = data;
+        for (var i = 0; i < JSON2musicObjectsArray.length; i++) {
+          JSON2musicObjectsArray[i].id = counter;
+          musicObjectsArray.push(JSON2musicObjectsArray[i]);
+          counter++;
+        }
+        populateSongDiv(musicObjectsArray);
+        console.log("JSON2 loaded: ",musicObjectsArray);
+      }
+    });
+    // var myRequest2 = new XMLHttpRequest();
+    // myRequest2.addEventListener("load", JSON2);
+    // myRequest2.open("GET", "songList2.json");
+    // myRequest2.send();
   }
 });
 
 var musicObjectsArray = [];
-var songListDiv = document.getElementById("song_list_id");
+var songListDiv = $('#song_list_id');
 var counter = 0;
 
 
