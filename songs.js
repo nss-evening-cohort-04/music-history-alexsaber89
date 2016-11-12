@@ -1,3 +1,7 @@
+var musicObjectsArray = [];
+var songListDiv = $('#song_list_id');
+var counter = 0;
+
 function activateListView() {
   $('#list-music-view').show();
   $('#add-music-view').hide();
@@ -120,28 +124,7 @@ document.querySelector("body").addEventListener("click", function() {
   }
 });
 
-var musicObjectsArray = [];
-var songListDiv = $('#song_list_id');
-var counter = 0;
-
-
 var myRequest = new XMLHttpRequest();
 myRequest.addEventListener("load", parseJSON);
 myRequest.open("GET", "songList1.json");
 myRequest.send();
-
-//RegEx stuff (not sure if needed?)
-// songs[songs.length] = "Legs > by Z*ZTop on the album Eliminator";
-// songs[songs.length] = "The Logical Song > by Supertr@amp on the album Breakfast in America";
-// songs[songs.length] = "Another Brick in the Wall > by Pink Floyd on the album The Wall";
-// songs[songs.length] = "Welco(me to the Jungle > by Guns & Roses on the album Appetite for Destruction";
-// songs[songs.length] = "Ironi!c > by Alanis Moris*ette on the album Jagged Little Pill";
-
-// songs.unshift("Postpartum - by Taylor McFerrin on the album Early Riser");
-// songs.push("Perpetual Black Second - by Meshuggah on the album Nothing");
-
-  // songs[i] = songs[i].replace(/\*/g, "");
-  // songs[i] = songs[i].replace(/\(/g, "");
-  // songs[i] = songs[i].replace(/@/g,"");
-  // songs[i] = songs[i].replace(/!/g,"");
-  // songs[i] = songs[i].replace(/>/g," - ");
